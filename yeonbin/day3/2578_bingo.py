@@ -46,7 +46,7 @@ ans = 0 # 몇번째 수인지
 bing = 0 # 빙고개수
 
 for _ in range(5):
-    call += list(map(int, input().split()))
+    call += list(map(int, input().split())) # 리스트 더하기
 # print(call)
 for idx in range(25): # 사회자 숫자 순회
     nxt = False # 숫자 찾았는지 확인하는 용
@@ -58,12 +58,12 @@ for idx in range(25): # 사회자 숫자 순회
                 arr[i][j] = -1 # 부르는 숫자 -1로 바꾸기
                 bing = check_bingo(arr)
                 if bing >= 3:
-                    ans = idx + 1
+                    ans = idx + 1 # 인덱스가 0부터니까
                 nxt = True
                 break # 찾으면 다음 숫자 바로 찾게 넘어가고싶다면?
         if  nxt == True:
             break
     if bing >= 3:
         break
-print(ans)
+print(ans) # 몇번째에 불렀는지 출력
 
