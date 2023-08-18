@@ -8,9 +8,12 @@ t 움직일 시간
 왼쪽 아래가 (0,0)
 '''
 
-# 1. delta
+# 1. delta > 너무 경우가 많다.
 # row, col 순서 (-1,1), (-1, -1), (1, -1), (-1, -1), (-1, 1), (1, 1)
-# 2. 수학으로..
+# 2. 수학으로.. > 2N 모듈로 잘라서 ㄱㄱ
+#
+# 나중에 좌표 변환 해줘야함
+W, H = map(int, input().split()) # 가로 세로 길이, *2 해서 사용할거임
+start_i, start_j = map(int, input().split())
+time = int(input())
 
-col, row = map(int, input().split())
-x, y = map(int, input().split())
