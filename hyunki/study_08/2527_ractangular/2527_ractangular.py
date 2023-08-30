@@ -1,15 +1,30 @@
 import sys
 sys.stdin = open('input.txt')
 
-# 두개의 직사강형을 비교
-# 겹치면 a, 선이 닿으면 b, 점이 닿으면 c, 안 겹치면 d
+for _ in range(4):
+    x1,y1,p1,q1,x2,y2,p2,q2 = map(int, input().split())
 
+    # 공통부분 X = d
+    if p1 < x2 or p2 < x1 or q1 < y2 or q2 < y1:
+        print('d')
+        continue
 
-for tc in range(4):
-    racs = list(map(int, input().split()))
-
-    A = racs[:4]
-    B = racs[4:]
+    # 점 = c
+    elif p1 == x2 or p2 == x1:
+        if q1 == y2 or q2 == y1:
+            print('c')
+            continue
+        # 선분 = b
+        else:
+            print('b')
+            continue
+    elif q1 == y2 or q2 == y1:
+        print('b')
+        continue
+    # 직사각형 = a
+    else:
+        print('a')
+        continue
 
 
 
