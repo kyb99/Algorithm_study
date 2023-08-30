@@ -1,7 +1,7 @@
 # 색종이 # 230807
 # 순서대로 놓는거라 앞에 놓인게 가리는거임
 # 맨 마지막꺼는 하나도 안가리겠지, 문제 잘 읽기
-# 현재 53점 왜?
+# 현재 53점 왜? > 메모리 초과
 '''
 입력형식
 - N (1~100)
@@ -44,15 +44,5 @@ print(len(area[N-1])) # 마지막 색종이 영역 출력
     
 
 
-
-
-# 이렇게도 가능할듯?
-# for _ in range(N): # 색종이 입력받기
-#     info = list(map(int, input().split()))
-#     print(info) # test
-#     p_set = set()
-#     for i in range(info[0], info[0]+info[2]):
-#         for j in range(info[1], info[1]+info[3]):
-#             pass
 
 
